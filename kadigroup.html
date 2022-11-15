@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">
+                <img src="/img/logo.png" alt="">
+                <h1>KadiGroup</h1>
+            </a>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <a href="#">
+                    <li>О нас</li>
+                </a>
+                <a href="#">
+                    <li>Услуги</li>
+                </a>
+                <a href="#">
+                    <li>Контакты</li>
+                </a>
+            </ul>
+        </div>
+        <div class="menu">
+            <img src="/img/menu-btn.png" alt="">
+        </div>
+        
+    </header>
+
+    <section class="main-info">
+    <div class="service">
+        <img src="/img/table2.png" alt="">
+        <div class="content">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus odit quo quidem temporibus eos a aliquid nihil iste reprehenderit quos asperiores assumenda, vel sint delectus placeat sequi quisquam illo quis.</p>
+        </div>
+    </div>
+
+    <div class="about-service">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, tenetur optio! Harum assumenda maiores, consequatur accusantium dolorem quis, magnam, quibusdam incidunt quas placeat atque ad asperiores veritatis reiciendis obcaecati impedit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officia hic dolorum ad incidunt quam, sed perferendis quas atque cumque vero commodi aspernatur nihil porro? Voluptatum quod minima porro tempore.
+        </p>
+    </div>
+
+    <div class="btn">
+        Проконсультироваться
+    </div>
+
+    </section>
+
+    <footer>
+
+        <div class="logo">
+            <a href="#">
+                <img src="/img/logo.png" alt="">
+                <h1>KadiGroup</h1>
+            </a>
+        </div>
+
+        <ul>
+            <a href="#">
+                <li>О нас</li>
+            </a>
+            <a href="#">
+                <li>Обратная форма связи</li>
+            </a>
+            <a href="#">
+                <li>Выбор услуг</li>
+            </a>
+        </ul>
+
+        <p>
+            Контактная информация
+        </p>
+
+        <div class="social">
+            <img src="/img/vk.png" alt="">
+            <img src="/img/insta.png" alt="">
+            <img src="/img/telega.png" alt="">
+        </div>
+
+    </footer>
+
+    <script>
+        const menu = document.querySelector('.menu')
+        const nav = document.querySelector('.nav')
+
+        menu.addEventListener('click', () => {
+            nav.classList.add('open-nav')
+        });
+
+    </script>
+
+</body>
+</html>
