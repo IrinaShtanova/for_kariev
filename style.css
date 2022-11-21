@@ -7,6 +7,7 @@ body {
     font-family: 'Acrom', sans-serif;
 }
 
+
 header {
     display: flex;
     flex-direction: row;
@@ -107,6 +108,19 @@ section.main-info {
 
 }
 
+.bottom-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
 .btn {
     display: flex;
     flex-direction: row;
@@ -122,6 +136,46 @@ section.main-info {
     color: #F2F2F2;
     cursor: pointer;
 
+}
+
+.chat {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(127, 150, 166, 0.6);
+    padding: 16px 32px;
+    text-align: right;
+    z-index: 2;
+    transform: translateY(200%);
+    transition: transform .25s ease-in-out;
+}
+
+.chat .close {
+    cursor: pointer;
+}
+
+.none-btn {
+    display: none;
+}
+
+.chat form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.open-chat {
+    transform: translateY(-70%);
+}
+
+.bottom-block .chat form input {
+    height: 56px;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 20px;
+    color: #BDBDBD;
+    padding-left: 10px;
+    border-color: #F2F2F2;
 }
 
 footer {
