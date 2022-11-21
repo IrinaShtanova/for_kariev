@@ -42,15 +42,27 @@
         <h2>ул. блаблабла д. 12/7</h2>
 
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17983.502434489164!2d37.89421584999999!3d55.70745285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1668535743105!5m2!1sru!2sru" width="1120" height="484" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17983.502434489164!2d37.89421584999999!3d55.70745285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1668535743105!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
-    <div class="btn">
-        Проконсультироваться
-    </div>
-
-    </section>
-
+        <div class="bottom-block">
+            <div class="btn">
+                Проконсультироваться
+            </div>
+            <div class="chat">
+                <img class="close" src="/img/close.png" alt="">
+                <form action="">
+                    <input type="text" name="text" placeholder="Имя">
+                    <input type="tel" name="phone" placeholder="Телефон">
+                    <input type="email" name="email" placeholder="E-mail">
+                </form>
+            </div>
+            <div class="chat-btn">
+                <img src="/img/chat.png" alt="">
+            </div>
+        </div>
+    
+        </section>
     <footer>
 
         <div class="logo">
@@ -85,12 +97,35 @@
     </footer>
 
     <script>
+
+        const btn = document.querySelector('.chat-btn')
+        const chat = document.querySelector('.chat')
+        const close = document.querySelector('.close')
+
+        btn.addEventListener('click', () => {
+            chat.classList.add('open-chat');
+            btn.classList.add('none-btn');
+            });
+
+        close.addEventListener('click', () => {
+            chat.classList.remove('open-chat');
+            btn.classList.remove('none-btn');
+            });
+
         const menu = document.querySelector('.menu')
         const nav = document.querySelector('.nav')
 
         menu.addEventListener('click', () => {
-            nav.classList.add('open-nav')
-        });
+            if(nav.classList.contains('open-nav')) {
+
+                nav.classList.remove('open-nav');
+
+            } else {
+
+                nav.classList.add('open-nav');
+
+            }});
+            
 
     </script>
 
