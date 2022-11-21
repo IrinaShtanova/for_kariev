@@ -11,16 +11,25 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 24px 150px;
     background-color: rgba(127, 150, 166, 0.6);
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px 40px;
 }
 
 .nav {
     position: fixed;
     right: 0;
-    top: 132px;
+    top: 104px;
     background-color: rgba(127, 150, 166, 0.6);
-    padding: 24px 140px;
+    padding: 24px 32px;
     text-align: right;
     z-index: 2;
     transform: translateY(-200%);
@@ -39,8 +48,8 @@ header {
 .nav ul a li {
     padding: 8px;
     font-weight: 300;
-    font-size: 32px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 20px;
     text-align: right;
     color: #3F3635;
 }
@@ -60,7 +69,7 @@ header {
     text-decoration: none;
     font-weight: 500;
     font-size: 52px;
-    line-height: 70px;
+    line-height: 52px;
     letter-spacing: 0.05em;
     color: #3F3635;
     padding: 0 20px;
@@ -72,11 +81,11 @@ header {
     cursor: pointer;
 }
 
-section.main-info {
+.main-info {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 48px 150px;
+    padding: 48px;
 }
 
 h1 {
@@ -110,33 +119,21 @@ iframe {
     align-items: center;
 }
 
-.chat-btn {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
 .btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    width: 930px;
-    height: 88px;
+
+    padding: 20px 70px;
     background-color: #7F96A6;
     font-weight: 300;
     font-size: 48px;
     line-height: 56px;
     color: #F2F2F2;
     cursor: pointer;
-
 }
 
 .chat {
     position: fixed;
     right: 0;
-    bottom: 0;
+    bottom: -54px;
     background-color: rgba(127, 150, 166, 0.6);
     padding: 16px 32px;
     text-align: right;
@@ -177,9 +174,9 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px 150px;
-    background-color: rgba(127, 150, 166, 0.6);;
+    justify-content: center;
+    background-color: rgba(127, 150, 166, 0.6);
+    width: 100%;
 }
 
 footer ul {
@@ -188,9 +185,9 @@ footer ul {
 
 footer ul a {
     text-decoration: none;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 28px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
     color: #3F3635;
 }
 
@@ -199,8 +196,8 @@ footer ul a li {
 }
 
 footer p {
-    font-weight: 300;
-    font-size: 24px;
+    font-weight: 400;
+    font-size: 20px;
     line-height: 28px;
     color: #3F3635;
 }
@@ -211,14 +208,10 @@ footer .social {
     gap: 30px;
 }
 
-@media screen and (max-width: 5%) {
+@media screen and (max-width: 480px) {
 
-   header {
-        padding: 20px;
-    }
-
-    .logo a img {
-        width: 20%;
+    .container {
+        margin: 20px 10px;
     }
 
     .logo a h1 {
