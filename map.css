@@ -79,10 +79,6 @@ section.main-info {
     padding: 48px 150px;
 }
 
-h1, h2 {
-    color: red;
-}
-
 h1 {
     font-weight: 300;
     font-size: 55px;
@@ -97,7 +93,28 @@ h2 {
     color: #000000;
 }
 
+.map {
+    display: flex;
+    justify-content: center;
+}
 
+iframe {
+    width: 100%; 
+    height: 620px; 
+}
+
+.bottom-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
 
 .btn {
     display: flex;
@@ -114,6 +131,46 @@ h2 {
     color: #F2F2F2;
     cursor: pointer;
 
+}
+
+.chat {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(127, 150, 166, 0.6);
+    padding: 16px 32px;
+    text-align: right;
+    z-index: 2;
+    transform: translateY(200%);
+    transition: transform .25s ease-in-out;
+}
+
+.chat .close {
+    cursor: pointer;
+}
+
+.none-btn {
+    display: none;
+}
+
+.chat form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.open-chat {
+    transform: translateY(-70%);
+}
+
+.bottom-block .chat form input {
+    height: 56px;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 20px;
+    color: #BDBDBD;
+    padding-left: 10px;
+    border-color: #F2F2F2;
 }
 
 footer {
@@ -152,4 +209,33 @@ footer .social {
     display: flex;
     flex-direction: row;
     gap: 30px;
+}
+
+@media screen and (max-width: 5%) {
+
+   header {
+        padding: 20px;
+    }
+
+    .logo a img {
+        width: 20%;
+    }
+
+    .logo a h1 {
+        font-weight: 100px;
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+    .nav {
+        top: 102px;
+        padding: 20px 24px;
+    }
+
+    .nav ul a li {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 20px;
+    }
+
 }
