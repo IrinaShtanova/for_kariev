@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="map.css">
 </head>
 <body>
     <header>
@@ -36,26 +36,33 @@
     </header>
 
     <section class="main-info">
-    <div class="service">
-        <img src="/img/table2.png" alt="">
-        <div class="content">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus odit quo quidem temporibus eos a aliquid nihil iste reprehenderit quos asperiores assumenda, vel sint delectus placeat sequi quisquam illo quis.</p>
+
+        <h1>Наш главный офис</h1>
+
+        <h2>ул. блаблабла д. 12/7</h2>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17983.502434489164!2d37.89421584999999!3d55.70745285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1668535743105!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-    </div>
 
-    <div class="about-service">
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, tenetur optio! Harum assumenda maiores, consequatur accusantium dolorem quis, magnam, quibusdam incidunt quas placeat atque ad asperiores veritatis reiciendis obcaecati impedit.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officia hic dolorum ad incidunt quam, sed perferendis quas atque cumque vero commodi aspernatur nihil porro? Voluptatum quod minima porro tempore.
-        </p>
-    </div>
-
-    <div class="btn">
-        Проконсультироваться
-    </div>
-
-    </section>
-
+        <div class="bottom-block">
+            <div class="btn">
+                Проконсультироваться
+            </div>
+            <div class="chat">
+                <img class="close" src="/img/close.png" alt="">
+                <form action="">
+                    <input type="text" name="text" placeholder="Имя">
+                    <input type="tel" name="phone" placeholder="Телефон">
+                    <input type="email" name="email" placeholder="E-mail">
+                </form>
+            </div>
+            <div class="chat-btn">
+                <img src="/img/chat.png" alt="">
+            </div>
+        </div>
+    
+        </section>
     <footer>
 
         <div class="logo">
@@ -90,12 +97,35 @@
     </footer>
 
     <script>
+
+        const btn = document.querySelector('.chat-btn')
+        const chat = document.querySelector('.chat')
+        const close = document.querySelector('.close')
+
+        btn.addEventListener('click', () => {
+            chat.classList.add('open-chat');
+            btn.classList.add('none-btn');
+            });
+
+        close.addEventListener('click', () => {
+            chat.classList.remove('open-chat');
+            btn.classList.remove('none-btn');
+            });
+
         const menu = document.querySelector('.menu')
         const nav = document.querySelector('.nav')
 
         menu.addEventListener('click', () => {
-            nav.classList.add('open-nav')
-        });
+            if(nav.classList.contains('open-nav')) {
+
+                nav.classList.remove('open-nav');
+
+            } else {
+
+                nav.classList.add('open-nav');
+
+            }});
+            
 
     </script>
 
