@@ -7,13 +7,21 @@ body {
     font-family: 'Acrom', sans-serif;
 }
 
-
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 24px 150px;
     background-color: rgba(127, 150, 166, 0.6);
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px 40px;
 }
 
 .nav {
@@ -115,33 +123,21 @@ section.main-info {
     align-items: center;
 }
 
-.chat-btn {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
 .btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    width: 930px;
-    height: 88px;
+
+    padding: 20px 70px;
     background-color: #7F96A6;
     font-weight: 300;
     font-size: 48px;
     line-height: 56px;
     color: #F2F2F2;
     cursor: pointer;
-
 }
 
 .chat {
     position: fixed;
     right: 0;
-    bottom: 0;
+    bottom: -54px;
     background-color: rgba(127, 150, 166, 0.6);
     padding: 16px 32px;
     text-align: right;
@@ -182,9 +178,9 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px 150px;
-    background-color: rgba(127, 150, 166, 0.6);;
+    justify-content: center;
+    background-color: rgba(127, 150, 166, 0.6);
+    width: 100%;
 }
 
 footer ul {
